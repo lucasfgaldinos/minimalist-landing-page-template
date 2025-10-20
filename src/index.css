@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
+
+* {
+	font-family: "Outfit", sans-serif;
+}
+
+:root {
+	--shadow-button-hover: rgba(252, 96, 168, 0.3) 0px 0px 0px 3px;
+}
+
+.background-button {
+	background: linear-gradient(
+		90deg,
+		rgba(23, 137, 252, 1) 0%,
+		rgba(252, 96, 168, 1) 100%
+	);
+}
