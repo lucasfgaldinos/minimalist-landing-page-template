@@ -6,7 +6,9 @@ import { InfoBlock } from '../infoBlock';
 export function Team() {
 	return (
 		<section className="container-section background-dark">
-			<p className="text-white text-4xl text-center">Expert Help In One Tap</p>
+			<p className="text-white text-4xl text-center font-semibold">
+				Expert Help In One Tap
+			</p>
 
 			<p className="text-white text-xl text-center mt-5 mb-24 max-w-[850px] mx-auto">
 				Our diverse and dynamic team is the heart of our success. Comprising

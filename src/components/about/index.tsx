@@ -6,7 +6,9 @@ import { InfoBlock } from '../infoBlock';
 export function About() {
 	return (
 		<section className="container-section background-dark">
-			<p className="text-white text-4xl text-center">Collaboration Made Easy</p>
+			<p className="text-white text-4xl text-center font-semibold">
+				Collaboration Made Easy
+			</p>
 
 			<p className="text-white text-xl text-center mt-5 mb-24 max-w-[850px] mx-auto">
 				We've developed a straightforward yet robust framework to help determine
