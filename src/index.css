@@ -67,6 +67,14 @@
 	width: 30%;
 }
 
+.background-dark {
+	background-image: linear-gradient(
+		111.4deg,
+		rgba(7, 7, 9, 1) 6.5%,
+		rgb(13, 10, 76) 93.2%
+	);
+}
+
 .arrow-animation {
 	animation: arrowAnimation 1s ease-in infinite alternate;
 }
