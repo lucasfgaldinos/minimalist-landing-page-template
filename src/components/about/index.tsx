@@ -6,7 +6,7 @@ import { InfoBlock } from '../infoBlock';
 export function About() {
 	return (
 		<section className="container-section background-dark">
-			<p className="gradient-text text-white text-2xl md:text-4xl text-center font-semibold">
+			<p className="gradient-text text-2xl md:text-4xl text-center font-semibold">
 				Collaboration Made Easy
 			</p>
 
