@@ -6,16 +6,16 @@ import { InfoBlock } from '../infoBlock';
 export function About() {
 	return (
 		<section className="container-section background-dark">
-			<p className="text-white text-4xl text-center font-semibold">
+			<p className="gradient-text text-white text-2xl md:text-4xl text-center font-semibold">
 				Collaboration Made Easy
 			</p>
 
-			<p className="text-white text-xl text-center mt-5 mb-24 max-w-[850px] mx-auto">
+			<p className="text-white text-sm md:text-xl text-center mt-5 mb-14 md:mb-24 max-w-[850px] mx-auto">
 				We've developed a straightforward yet robust framework to help determine
 				if partnering with [Your Company Name] aligns with your product's goals.
 			</p>
 
-			<div className="flex flex-col gap-7 md:flex-row md:gap-10 md:items-end md:justify-center flex-wrap">
+			<div className="flex flex-col items-center gap-7 md:flex-row md:gap-10 md:items-end md:justify-center flex-wrap">
 				<InfoBlock
 					img={calendarImg}
 					imgName="Calendar"
