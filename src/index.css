@@ -5,8 +5,17 @@
 	font-family: "Outfit", sans-serif;
 }
 
+@theme {
+	--color-dark: #383a41;
+	--color-pink: #fc60a8;
+}
+
 :root {
 	--shadow-button-hover: rgba(252, 96, 168, 0.3) 0px 0px 0px 3px;
+}
+
+.container-section {
+	@apply px-4 py-8 md:p-28 w-full;
 }
 
 .background-button {
@@ -15,4 +24,27 @@
 		rgba(23, 137, 252, 1) 0%,
 		rgba(252, 96, 168, 1) 100%
 	);
+}
+
+.gradient-text {
+	line-height: 1.28;
+	background: linear-gradient(
+		90deg,
+		rgba(23, 137, 252, 1) 0%,
+		rgba(252, 96, 168, 1) 100%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+}
+
+.arrow-animation {
+	animation: arrowAnimation 1s ease-in infinite alternate;
+}
+
+@keyframes arrowAnimation {
+	to {
+		transform: translateY(20px);
+	}
 }

@@ -1,12 +1,10 @@
-import { Button } from '../../components/button';
+import { Hero } from '../../components/hero';
 
 export function Home() {
 	return (
-		<div>
-			<h1>Home</h1>
-			<Button height="sm" width="fit">
-				Request a project
-			</Button>
-		</div>
+		<>
+			<Hero />
+			<footer />
+		</>
 	);
 }
