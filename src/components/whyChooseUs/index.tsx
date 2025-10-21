@@ -9,7 +9,7 @@ export function WhyChooseUs() {
 	return (
 		<section className="container-section">
 			<div className="max-w-7xl mx-auto">
-				<p className="gradient-text text-4xl text-center mb-10 font-semibold">
+				<p className="gradient-text text-2xl md:text-4xl text-center mb-10 font-semibold">
 					Why Choose Us?
 				</p>
 

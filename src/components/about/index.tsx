@@ -15,7 +15,7 @@ export function About() {
 				if partnering with [Your Company Name] aligns with your product's goals.
 			</p>
 
-			<div className="flex flex-col items-center gap-7 md:flex-row md:gap-10 md:items-end md:justify-center flex-wrap">
+			<div className="flex flex-col items-center gap-7 md:flex-row md:gap-10 md:items-start md:justify-center flex-wrap">
 				<InfoBlock
 					img={calendarImg}
 					imgName="Calendar"
