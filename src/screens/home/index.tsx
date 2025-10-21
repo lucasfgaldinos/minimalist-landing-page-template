@@ -1,4 +1,5 @@
 import { About } from '../../components/about';
+import { Footer } from '../../components/footer';
 import { Header } from '../../components/header';
 import { Hero } from '../../components/hero';
 import { Specialty } from '../../components/specialty';
@@ -14,7 +15,7 @@ export function Home() {
 			<WhyChooseUs />
 			<Team />
 			<Specialty />
-			<footer />
+			<Footer />
 		</>
 	);
 }
