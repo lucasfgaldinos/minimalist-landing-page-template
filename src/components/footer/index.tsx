@@ -4,7 +4,8 @@ import {
 	LinkedinLogoIcon,
 	TwitchLogoIcon,
 } from '@phosphor-icons/react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { toast } from 'react-toastify';
 import { Button } from '../button';
 import { ContactUsDialogContent } from '../contactUsDialog';
 import { Dialog, DialogTrigger } from '../ui/dialog';
@@ -12,6 +13,16 @@ import { Dialog, DialogTrigger } from '../ui/dialog';
 export function Footer() {
 	const [open, setOpen] = useState<boolean>(false);
 	const currentYear = new Date().getFullYear();
+	const inputSubscribeNewsletter = useRef<HTMLInputElement>(null);
+
+	const handleSubmit = (e: React.FormEvent) => {
+		e.preventDefault();
+		if (inputSubscribeNewsletter.current) {
+			inputSubscribeNewsletter.current.value = '';
+		}
+
+		toast('You have successfully subscribed to our newsletter! 😁');
+	};
 
 	return (
 		<footer className="container-section background-dark">
@@ -114,14 +125,18 @@ export function Footer() {
 						<p className="text-white font-semibold mb-2">
 							Subscribe To Our Newsletter!
 						</p>
-						<input
-							placeholder="Your Best Email"
-							className="w-full mb-2 h-12 rounded-lg border-2 outline-none border-white focus:border-pink px-3 text-white placeholder:text-gray-400"
-							type="email"
-						/>
-						<Button height="lg" width="full">
-							Subscribe Now
-						</Button>
+						<form onSubmit={handleSubmit}>
+							<input
+								ref={inputSubscribeNewsletter}
+								required
+								placeholder="Your Best Email"
+								className="w-full mb-2 h-12 rounded-lg border-2 outline-none border-white focus:border-pink px-3 text-white placeholder:text-gray-400"
+								type="email"
+							/>
+							<Button type="submit" height="lg" width="full">
+								Subscribe Now
+							</Button>
+						</form>
 					</div>
 				</div>
 
