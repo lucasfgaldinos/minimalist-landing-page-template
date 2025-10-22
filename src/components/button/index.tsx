@@ -26,9 +26,10 @@ export function Button({
 	height,
 	width,
 	type = 'button',
+	...props
 }: ButtonProps) {
 	return (
-		<button className={button({ height, width })} type={type}>
+		<button {...props} className={button({ height, width })} type={type}>
 			{children}
 		</button>
 	);

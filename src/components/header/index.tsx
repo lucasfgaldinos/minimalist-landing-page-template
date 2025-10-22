@@ -1,6 +1,11 @@
+import { useState } from 'react';
 import { Button } from '../button';
+import { ContactUsDialogContent } from '../contactUsDialog';
+import { Dialog, DialogTrigger } from '../ui/dialog';
 
 export function Header() {
+	const [open, setOpen] = useState<boolean>(false);
+
 	return (
 		<header className="px-4 py-4 shadow fixed w-full top-0 left-0 backdrop-blur-lg bg-white/70">
 			<div className="max-w-7xl flex justify-between mx-auto">
@@ -39,9 +44,14 @@ export function Header() {
 					</button>
 				</nav>
 
-				<Button height="sm" width="fit">
-					Contact Us
-				</Button>
+				<Dialog open={open} onOpenChange={setOpen}>
+					<DialogTrigger asChild>
+						<Button type="button" width="fit" height="sm">
+							Contact Us
+						</Button>
+					</DialogTrigger>
+					<ContactUsDialogContent setOpen={setOpen} />
+				</Dialog>
 			</div>
 		</header>
 	);

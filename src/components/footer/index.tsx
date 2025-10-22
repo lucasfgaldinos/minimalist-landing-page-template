@@ -4,9 +4,13 @@ import {
 	LinkedinLogoIcon,
 	TwitchLogoIcon,
 } from '@phosphor-icons/react';
+import { useState } from 'react';
 import { Button } from '../button';
+import { ContactUsDialogContent } from '../contactUsDialog';
+import { Dialog, DialogTrigger } from '../ui/dialog';
 
 export function Footer() {
+	const [open, setOpen] = useState<boolean>(false);
 	const currentYear = new Date().getFullYear();
 
 	return (
@@ -76,12 +80,18 @@ export function Footer() {
 							>
 								Career
 							</button>
-							<button
-								className="text-white active:opacity-75 text-sm font-light cursor-pointer hover:translate-x-1 transition-transform duration-100"
-								type="button"
-							>
-								Contact Us
-							</button>
+
+							<Dialog open={open} onOpenChange={setOpen}>
+								<DialogTrigger asChild>
+									<button
+										className="text-white active:opacity-75 text-sm font-light cursor-pointer hover:translate-x-1 transition-transform duration-100"
+										type="button"
+									>
+										Contact Us
+									</button>
+								</DialogTrigger>
+								<ContactUsDialogContent setOpen={setOpen} />
+							</Dialog>
 						</div>
 					</div>
 					<div className="max-w-64 flex flex-col gap-2">
