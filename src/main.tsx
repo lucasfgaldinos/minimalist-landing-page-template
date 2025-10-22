@@ -1,13 +1,15 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
+import { RouterProvider } from 'react-router-dom';
 import { Bounce, ToastContainer } from 'react-toastify';
-import { Home } from './screens/home';
+import { routes } from './routes/routes';
 
 // biome-ignore lint: false positive
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
-		<Home />
+		<RouterProvider router={routes} />
+
 		<ToastContainer
 			position="bottom-right"
 			autoClose={3000}
